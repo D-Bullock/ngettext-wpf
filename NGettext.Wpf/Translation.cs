@@ -26,7 +26,7 @@ namespace NGettext.Wpf
         [StringFormatMethod("pluralMsgId")] //< not yet supported, #1833369.
         public static string PluralGettext(int n, string singularMsgId, string pluralMsgId, params object[] @params)
         {
-            if (Localizer is null)
+            if (Localizer is null)	
             {
                 CompositionRoot.WriteMissingInitializationErrorMessage();
                 return string.Format(CultureInfo.InvariantCulture, n == 1 ? singularMsgId : pluralMsgId, @params);

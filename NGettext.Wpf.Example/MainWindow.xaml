@@ -37,6 +37,18 @@
             <Button CommandParameter="da-DK" Command="{StaticResource ChangeCultureCommand}"
                     Content="{wpf:Gettext Danish}" />
         </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+            <TextBlock Text="{wpf:Gettext Localised Plural example:}"
+                       Width="280"
+                       TextAlignment="Right"
+                       Margin="0,0,20,0" />
+            <!--not working yet-->
+            <!--<TextBlock Text="{wpf:GettextPlural '1 Example', '2 Examples', N={Binding PluralExampleCount}}"-->
+            <TextBlock Text="{wpf:GettextPlural '1 Example', '2 Examples', 1}" Width="220" />
+            <TextBlock Text="{wpf:GettextPlural '1 Example', '2 Examples', 2}" Width="220" />
+        </StackPanel>
+        
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
             <TextBlock Text="{wpf:Gettext Localized number format example:}" Width="280" TextAlignment="Right"
                        Margin="0,0,20,0" />
